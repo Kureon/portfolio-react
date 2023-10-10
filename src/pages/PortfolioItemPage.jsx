@@ -1,9 +1,9 @@
-export const PortfolioItemPage = () => {
+export const PortfolioItemPage = ({ item }) => {
   return (
     <div>
-      <h1>{selectedItem.title}</h1>
-      <p>{selectedItem.description}</p>
-      <img src={selectedItem.imageUrl} alt={selectedItem.title} />
+      <h1>{item.title}</h1>
+      <p>{item.description}</p>
+      <img src={item.imageUrl} alt={item.title} />
     </div>
   );
 };

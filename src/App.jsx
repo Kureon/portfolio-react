@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import "./App.css";
+import { useState } from "react";
 import { portfolioItems } from "./utils/data";
+import { PortfolioPage } from "./pages/PortfolioPage";
 import { PortfolioItemPage } from "./pages/PortfolioItemPage";
 
 export const App = () => {
@@ -8,7 +8,11 @@ export const App = () => {
 
   return (
     <div className="App">
-      <PortfolioItemPage selectedItem={selectedItem} />
+      {selectedItem ? (
+        <PortfolioItemPage item={selectedItem} />
+      ) : (
+        <PortfolioPage />
+      )}
     </div>
   );
 };
