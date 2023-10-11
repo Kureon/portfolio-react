@@ -9,9 +9,9 @@ export const App = () => {
   return (
     <div className="App">
       {selectedItem ? (
-        <PortfolioItemPage item={selectedItem} />
+        <PortfolioItemPage item={selectedItem} clickFn={setSelectedItem} />
       ) : (
-        <PortfolioPage />
+        <PortfolioPage clickFn={setSelectedItem} />
       )}
     </div>
   );

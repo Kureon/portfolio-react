@@ -1,10 +1,13 @@
-import { PortfolioItemCard } from "../components/ui/PortfolioItemCard";
+import { PortfolioItemCard } from "../components/PortfolioItemCard";
 import { portfolioItems } from "../utils/data";
+import { Center } from "@chakra-ui/react";
 
-export const PortfolioPage = () => {
+export const PortfolioPage = ({ clickFn }) => {
   return (
-    {portfolioItems.map((item) => (
-      <PortfolioItemCard key={item.id} item={item} />
-    ))}
-  )
+    <Center gap={8} h="100vh" bgColor="blue.100">
+      {portfolioItems.map((item) => (
+        <PortfolioItemCard clickFn={clickFn} item={item} key={item.id} />
+      ))}
+    </Center>
+  );
 };
