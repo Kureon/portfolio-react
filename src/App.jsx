@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { portfolioItems } from "./utils/data";
-import { PortfolioPage } from "./pages/PortfolioPage";
 import { PortfolioItemPage } from "./pages/PortfolioItemPage";
+import { PortfolioPage } from "./pages/PortfolioPage";
 
 export const App = () => {
-  const [selectedItem, setSelectedItem] = useState(portfolioItems[0]);
+  const [selectedItem, setSelectedItem] = useState();
 
   return (
     <div className="App">
